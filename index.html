@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contablito</title>
+</head>
+<body>
+    <h1>Contablito</h1>
+    <form>
+        <label>Descripción</label>
+        <input type="text" name="Descripcion" id="Descripcion" required>
+        <div>
+            <br>
+            <label>Tipo de Transacción </label> 
+            <input type="radio" id="Compra" name="transaccion" value="compra" required checked>
+            <label for="Compra">Compra</label>
+        
+            <input type="radio" id="Venta" name="transaccion" value="venta" required>
+            <label for="Venta">Venta</label>
+        </div>
+
+        <div>
+            <br>
+            <label>Tipo IVA </label> 
+            <input type="radio" id="Basico" name="iva" value="basico" required checked>
+            <label for="Basico">Basico</label>
+        
+            <input type="radio" id="Minimo" name="iva" value="minimo" required>
+            <label for="Minimo">Minimo</label>
+
+            <input type="radio" id="Exento" name="iva" value="exento" required>
+            <label for="Exento">Exento</label>
+        </div>
+
+        <br>
+        <label>Subtotal ($)</label>
+        <input type="text" required>
+        <button type="button" onclick="agregar()">Ingresar</button>
+    </form>
+
+    <br>
+    <table border="1px" width ="80%" style="border-collapse:collapse; text-align:center;">
+        <thead id="head">
+            <tr>
+                <td>Descripción</td>
+                <td>Tipo</td>
+                <td>Subtotal ($)</td>
+                <td>IVA ($)</td>
+                <td>Total (IVA inc)</td>
+            </tr>
+        </thead>
+        <tbody id="t-body">
+        </tbody>
+    </table>
+
+    <div id="subtotal">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
