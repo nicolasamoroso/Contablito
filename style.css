@@ -1,3 +1,16 @@
 #head {
     background-color: rgb(185, 185, 185);
 }
+
+.margin {
+    margin-top: 50px;
+}
+
+#tabla {
+    border-collapse:collapse;
+    text-align:center;
+}
+
+.mr {
+    margin-right: 20px;
+}
