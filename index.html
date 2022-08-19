@@ -9,40 +9,41 @@
 </head>
 <body>
     <h1>Contablito</h1>
-    <form>
+    <form id="formulario">
         <label>Descripción</label>
-        <input type="text" name="Descripcion" id="Descripcion" required>
+        <input type="text" name="Descripcion" id="Descripcion">
         <div>
             <br>
             <label>Tipo de Transacción </label> 
-            <input type="radio" id="Compra" name="transaccion" value="compra" required checked>
+            <input type="radio" id="Compra" name="transaccion" value="Compra" checked>
             <label for="Compra">Compra</label>
         
-            <input type="radio" id="Venta" name="transaccion" value="venta" required>
+            <input type="radio" id="Venta" name="transaccion" value="Venta">
             <label for="Venta">Venta</label>
         </div>
 
         <div>
             <br>
             <label>Tipo IVA </label> 
-            <input type="radio" id="Basico" name="iva" value="basico" required checked>
+            <input type="radio" id="Basico" name="iva" value="Basico" checked>
             <label for="Basico">Basico</label>
         
-            <input type="radio" id="Minimo" name="iva" value="minimo" required>
+            <input type="radio" id="Minimo" name="iva" value="Minimo">
             <label for="Minimo">Minimo</label>
 
-            <input type="radio" id="Exento" name="iva" value="exento" required>
+            <input type="radio" id="Exento" name="iva" value="Exento">
             <label for="Exento">Exento</label>
         </div>
 
         <br>
         <label>Subtotal ($)</label>
-        <input type="text" required>
+        <input type="number" id="subtotal" min="0" name="subtotal">
+        
         <button type="button" onclick="agregar()">Ingresar</button>
     </form>
 
     <br>
-    <table border="1px" width ="80%" style="border-collapse:collapse; text-align:center;">
+    <table border="1px" width ="50%" style="border-collapse:collapse; text-align:center;">
         <thead id="head">
             <tr>
                 <td>Descripción</td>
